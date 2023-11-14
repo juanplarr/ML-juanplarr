@@ -42,7 +42,11 @@ img {
 
 footer {
     background-color: white;
-    text-align: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
 }
 
 footer i {
@@ -51,10 +55,29 @@ footer i {
     margin-bottom: 10px;
 }
 
+footer i:hover {
+    color: #39b54a;
+}
+
+.footerprincipal {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 25px;
+}
+
+.pagotarjeta, .enviogratis, .seguro {
+    display: flex;
+    flex-direction: column;
+}
+
 main {
     width: 90%;
     background-color: lightgray;
     margin: auto;
+    padding: 25px; 
 }
 
 article.producto {
@@ -69,13 +92,16 @@ article i {
     width: 30px;
     height: 30px;
     border: 1px solid #39b54a;
+    background-color: #FFF;
     border-radius: 50%;
     padding: 5px;
     right: 20px;
     top: -15px;
+
 }
 
-article div {
+
+.electrodomesticos {
     border-top: 1px solid #ebebeb;
     padding: 15px;
 }
@@ -116,12 +142,22 @@ article div {
     align-items: center;
 }
 
+/* preguntar*/
+/*
+.nombreprodu { display: none}
+
+.nombreprodu:hover {
+    display: unset;
+}
+*/
+
+
 
 @media (min-width: 361px) {
 
-    .nombreprodu {
-        display: unset;
-    }
+.nombreprodu {
+    display: unset;
+}
 
     article {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -210,4 +246,96 @@ article div {
         width: 30%;
     }
 
+
+
+}
+
+
+
+/* Formularios */
+
+.formregis p {
+    font-weight: bold;
+}
+
+.formregis {
+    max-width: 800px;
+    margin: 120px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"],
+button[type="reset"] {
+    background-color: blue;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button[type="reset"]:hover {
+    background-color: #0022AA;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-top: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+li a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+input[type="file"] {
+    margin-top: 8px;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button[type="submit"] {
+    background-color: blue;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+background-color: #0022AA;
 }
